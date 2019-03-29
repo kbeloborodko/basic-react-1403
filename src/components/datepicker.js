@@ -78,18 +78,14 @@ class DatePicker extends React.Component {
         />
         {(from || to) && (
           <div className="alert alert-success">
-            <ul className="mb-0">
-              <li>{from && `You have selected a from date: ${from}`}</li>
-              <li>{to && `You have selected a to date: ${to}`}</li>
-            </ul>
+            <div>{from && `You have selected a from date: ${from}`}</div>
+            <div>{to && `You have selected a to date: ${to}`}</div>
           </div>
         )}
         {(!from || !to) && (
           <div className="alert alert-danger">
-            <ul className="mb-0">
-              <li>{!from && 'Please select a from date'}</li>
-              <li>{!to && 'Please select a to date'}</li>
-            </ul>
+            <div>{!from && 'Please select a from date'}</div>
+            <div>{!to && 'Please select a to date'}</div>
           </div>
         )}
       </div>
