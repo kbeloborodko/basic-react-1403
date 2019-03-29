@@ -6,16 +6,18 @@ function ArticleList({ articles }) {
   const { openItemId, toggleOpenItem } = useAccordion()
 
   const articleItems = articles.map((article) => (
-    <li key={article.id}>
-      <Article
-        article={article}
-        isOpen={article.id === openItemId}
-        onBtnClick={toggleOpenItem(article.id)}
-      />
-    </li>
+    <Article
+      article={article}
+      isOpen={article.id === openItemId}
+      onBtnClick={toggleOpenItem(article.id)}
+    />
   ))
 
-  return <ul>{articleItems}</ul>
+  return (
+    <div className="container">
+      <div className="row">{articleItems}</div>
+    </div>
+  )
 }
 
 export default ArticleList

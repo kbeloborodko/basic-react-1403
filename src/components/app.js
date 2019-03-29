@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
 import ArticleList from './article-list'
+import DatePicker from './datepicker'
 
 function App({ articles }) {
   const [username, setUsername] = useState('Roma')
@@ -17,20 +18,27 @@ function App({ articles }) {
   }))
 
   return (
-    <>
-      <h1>Article App</h1>
-      Username:{' '}
-      <input
-        type="text"
-        value={username}
-        onChange={handleUserChange}
-        style={{
-          color: username.length < 5 ? 'red' : 'black'
-        }}
-      />
-      <Select value={selected} onChange={setSelected} options={options} isMulti />
+    <div className="container">
+      <div className="jumbotron">
+        <h1>Article App</h1>
+      </div>
+      <div className="form-group">
+        <label for="username">Username: </label>
+        <input
+          type="text"
+          id="username"
+          value={username}
+          onChange={handleUserChange}
+          className="form-control"
+        />
+      </div>
+      <div className="form-group">
+        <label for="articles">Articles</label>
+        <Select id="articles" value={selected} onChange={setSelected} options={options} isMulti />
+      </div>
+      <DatePicker />
       <ArticleList articles={articles} />
-    </>
+    </div>
   )
 }
 
