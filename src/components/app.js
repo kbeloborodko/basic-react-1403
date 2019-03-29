@@ -4,7 +4,7 @@ import ArticleList from './article-list'
 import DatePicker from './datepicker'
 
 function App({ articles }) {
-  const [username, setUsername] = useState('Roma')
+  const [username, setUsername] = useState('Kyrylo')
   const [selected, setSelected] = useState()
 
   const handleUserChange = (ev) => {
@@ -23,7 +23,7 @@ function App({ articles }) {
         <h1>Article App</h1>
       </div>
       <div className="form-group">
-        <label for="username">Username: </label>
+        <label htmlFor="username">Username: </label>
         <input
           type="text"
           id="username"
@@ -33,7 +33,7 @@ function App({ articles }) {
         />
       </div>
       <div className="form-group">
-        <label for="articles">Articles</label>
+        <label htmlFor="articles">Articles</label>
         <Select id="articles" value={selected} onChange={setSelected} options={options} isMulti />
       </div>
       <DatePicker />

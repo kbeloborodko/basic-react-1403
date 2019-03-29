@@ -7,6 +7,7 @@ function ArticleList({ articles }) {
 
   const articleItems = articles.map((article) => (
     <Article
+      key={article.id}
       article={article}
       isOpen={article.id === openItemId}
       onBtnClick={toggleOpenItem(article.id)}
