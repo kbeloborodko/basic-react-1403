@@ -24,7 +24,6 @@ class DatePicker extends React.Component {
       <div className="form-group">
         <label>{!from && 'Please select from date'}</label>
         <DayPickerInput
-          fromMonth="from"
           fromMonth={from}
           value={from}
           placeholder="From"
@@ -32,7 +31,6 @@ class DatePicker extends React.Component {
           component={this.renderInput}
         />
         <DayPickerInput
-          fromMonth="from"
           fromMonth={from}
           value={to}
           placeholder="To"
