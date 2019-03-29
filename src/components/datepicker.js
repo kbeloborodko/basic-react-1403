@@ -77,14 +77,14 @@ class DatePicker extends React.Component {
           onDayChange={this.handleToChange}
         />
         {(from || to) && (
-          <div className="alert success">
+          <div className="alert alert-success">
             <ul className="mb-0">
               <li>{from && `You have selected a from date: ${from}`}</li>
               <li>{to && `You have selected a to date: ${to}`}</li>
             </ul>
           </div>
         )}
-        {!from && !to && (
+        {(!from || !to) && (
           <div className="alert alert-danger">
             <ul className="mb-0">
               <li>{!from && 'Please select a from date'}</li>
