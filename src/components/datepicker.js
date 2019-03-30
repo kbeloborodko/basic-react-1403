@@ -1,5 +1,4 @@
 import React from 'react'
-import moment from 'moment'
 
 import DayPickerInput from 'react-day-picker/DayPickerInput'
 import 'react-day-picker/lib/style.css'
@@ -78,14 +77,14 @@ class DatePicker extends React.Component {
         />
         {(from || to) && (
           <div className="alert alert-success">
-            <div>{from && `You have selected a from date: ${from}`}</div>
-            <div>{to && `You have selected a to date: ${to}`}</div>
+            <div>{from && `You have selected a "from" date: ${from}`}</div>
+            <div>{to && `You have selected a "to" date: ${to}`}</div>
           </div>
         )}
         {(!from || !to) && (
           <div className="alert alert-danger">
-            <div>{!from && 'Please select a from date'}</div>
-            <div>{!to && 'Please select a to date'}</div>
+            <div>{!from && 'Please select a "from" date'}</div>
+            <div>{!to && 'Please select a "to" date'}</div>
           </div>
         )}
       </div>

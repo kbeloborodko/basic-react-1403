@@ -3,7 +3,7 @@ import Select from 'react-select'
 import ArticleList from './article-list'
 import DatePicker from './datepicker'
 
-function App({ articles }) {
+const App = ({ articles }) => {
   const [username, setUsername] = useState('Kyrylo')
   const [selected, setSelected] = useState()
 
